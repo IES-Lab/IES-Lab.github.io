@@ -13,6 +13,12 @@
 
 @font-face 
 {
+	font-family: "User highlight";
+	src: url(../fonts/Manrope/Manrope-Bold.otf) format("truetype");
+}
+
+@font-face 
+{
 	font-family: "User footer";
 	src: url(../fonts/Jost/Jost-500-Medium.otf) format("truetype");
 }
@@ -33,6 +39,9 @@ a
 	color: rgb(12, 72, 108)
 }
 
+b, strong {
+	font-family: "User highlight";
+}
 
 a:hover {text-decoration: underline;}
 
