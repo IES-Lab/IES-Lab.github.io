@@ -1,0 +1,30 @@
+<article>
+    {% if include.image %}
+    <img src="{{ include.image }}" align="right" alt=""
+         style="max-width: 150px; max-height: 125px; width: auto; height: auto; margin: 5px;">
+    {% endif %}
+
+    <h2>{{ include.title }}</h2>
+
+    <small>
+        <p style="text-indent: 0">{{ include.authors }}</p>
+        <p style="text-indent: 0">{{ include.venue }}</p>
+        <p style="text-indent: 0">
+            {% if include.webpage %}
+            <a target="_blank" href="{{ include.webpage }}"><i class="fa-solid fa-earth-americas"></i> Webpage</a>&ensp;
+            {% endif %}
+            {% if include.paper %}
+            <a target="_blank" href="{{ include.paper }}"><i class="fa-solid fa-file"></i> Paper</a>&ensp;
+            {% endif %}
+            {% if include.code %}
+            <a target="_blank" href="{{ include.code }}"><i class="fa-solid fa-code"></i> Code</a>&ensp;
+            {% endif %}
+            {% if include.hardware %}
+            <a target="_blank" href="{{ include.hardware }}"><i class="fa-solid fa-gear"></i> Hardware</a>&ensp;
+            {% endif %}
+            {% if include.media %}
+            <a target="_blank" href="{{ include.media }}"><i class="fa-solid fa-newspaper"></i> Media</a>&ensp;
+            {% endif %}
+        </p>
+    </small>
+</article>
