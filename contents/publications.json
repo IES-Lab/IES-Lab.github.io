@@ -1,55 +1,55 @@
 [
     {
         "name":"FACE",
-        "path":"./articles/research/face.html",
+        "path":"./articles/publications/face.html",
         "date":20261111
     }
     ,
     {
         "name":"VLA-Feedback",
-        "path":"./articles/research/vla-feedback.html",
+        "path":"./articles/publications/vla-feedback.html",
         "date":20260923
     }
     ,
     {
         "name":"PLATO",
-        "path":"./articles/research/plato.html",
+        "path":"./articles/publications/plato.html",
         "date":20260205
     }
     ,
     {
         "name":"FORTE",
-        "path":"./articles/research/forte.html",
+        "path":"./articles/publications/forte.html",
         "date":20250622
     }
     ,
     {
         "name":"LEGATO",
-        "path":"./articles/research/legato.html",
+        "path":"./articles/publications/legato.html",
         "date":20241106
     }
     ,
     {
         "name":"PRESTO",
-        "path":"./articles/research/presto.html",
+        "path":"./articles/publications/presto.html",
         "date":20240924
     }
     ,
     {
         "name":"OKAMI",
-        "path":"./articles/research/okami.html",
+        "path":"./articles/publications/okami.html",
         "date":20241016
     }
     ,
     {
         "name":"TRILL",
-        "path":"./articles/research/trill.html",
+        "path":"./articles/publications/trill.html",
         "date":20240905
     }
     ,
     {
         "name":"PRELUDE",
-        "path":"./articles/research/prelude.html",
+        "path":"./articles/publications/prelude.html",
         "date":20220919
     }
 ]
