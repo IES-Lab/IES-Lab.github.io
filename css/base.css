@@ -13,7 +13,7 @@
 
 @font-face 
 {
-	font-family: "User link";
+	font-family: "User light";
 	src: url(../fonts/Manrope/Manrope-Regular.otf) format("truetype");
 }
 
@@ -42,8 +42,7 @@ body
 a 
 {
 	text-decoration: none; 
-	font-family: "User link";
-	color: rgb(8, 128, 192)
+	color: rgb(6, 120, 180)
 }
 
 b, strong {
