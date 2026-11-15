@@ -45,11 +45,10 @@ a
 	color: rgb(6, 120, 180)
 }
 
-b, strong {
-	font-family: "User highlight";
+a:hover 
+{
+	text-decoration: underline;
 }
-
-a:hover {text-decoration: underline;}
 
 
 footer
