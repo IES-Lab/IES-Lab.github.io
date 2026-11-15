@@ -1,0 +1,82 @@
+image-gallery {
+	display: block;
+	min-width: 0;
+}
+
+image-gallery .gallery-track {
+	--gallery-gap: 12px;
+	--gallery-card-width: calc((100% - 2 * var(--gallery-gap)) / 3);
+	display: flex;
+	gap: var(--gallery-gap);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	padding-bottom: 8px;
+}
+
+image-gallery .gallery-track > figure {
+	flex: 0 0 var(--gallery-card-width);
+	min-width: 0;
+	margin: 0;
+	scroll-snap-align: start;
+}
+
+image-gallery .gallery-track img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: contain;
+	background: #fff;
+	border-radius: 6px;
+}
+
+image-gallery figcaption {
+	margin-top: 6px;
+	font-size: 14px;
+}
+
+image-gallery .gallery-controls {
+	display: flex;
+	justify-content: flex-end;
+	gap: 6px;
+	margin-top: 4px;
+}
+
+image-gallery .gallery-controls[hidden] {
+	display: none;
+}
+
+image-gallery button {
+	width: 32px;
+	height: 32px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	background: #fff;
+	color: #483c94;
+	font-size: 24px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+image-gallery button:disabled {
+	opacity: 0.35;
+	cursor: default;
+}
+
+@media (max-width: 600px) {
+	image-gallery .gallery-track {
+		--gallery-card-width: calc((100% - var(--gallery-gap)) / 2);
+	}
+}
+
+@media (max-width: 400px) {
+	image-gallery .gallery-track {
+		--gallery-card-width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	image-gallery .gallery-track {
+		scroll-behavior: auto;
+	}
+}
