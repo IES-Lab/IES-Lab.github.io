@@ -2,8 +2,7 @@
 article
 {
 	/* width: 500px; */
-	background-color: #eef0f7;
-	/* background-color: #f1f0f7; */
+	background-color: #eef4f7;
 	margin: 20px;
 
 	padding: 20px;
@@ -53,6 +52,11 @@ article p
 	line-height: 1.6;
 }
 
+article ul, article ol 
+{
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
 
 article figure
 {
