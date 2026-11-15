@@ -50,6 +50,7 @@ image-gallery .gallery-track img {
 image-gallery figcaption {
 	margin-top: 6px;
 	font-size: 14px;
+	text-align: center;
 }
 
 image-gallery .gallery-controls {
@@ -71,7 +72,7 @@ image-gallery .gallery-controls button {
 	padding: 0;
 	border: 0;
 	background: transparent;
-	color: #483c94;
+	color: #102a90;
 	font-size: 0;
 	cursor: pointer;
 }
@@ -117,7 +118,7 @@ image-gallery .gallery-edge.next {
 }
 
 image-gallery .gallery-edge:focus-visible {
-	outline: 2px solid #483c94;
+	outline: 2px solid #102a90;
 	outline-offset: -2px;
 }
 
