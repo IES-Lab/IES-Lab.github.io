@@ -1,0 +1,50 @@
+<article>
+	<img class="logo-img" src="./images/research/logos/kist.png">
+
+	<h1>Modular manipulators</h1>
+
+
+	<p>
+		I participated in the development of the modular manipulator (ModMAN) system at the Korea Insitute of Science and Technology and built the low-level slave system for the control of the robotic modules. With the controller, ModMAN can automatically generate its kinematic and dynamic models, and control its joints, given an arbitrary serial assembly.
+	</p>
+
+		<div class="show-div hide">
+
+		<br>
+
+		<p>
+			At the Korea Institute of Science and Technology, a modular manipulator (ModMAN) system was developed to accelerate the commercialization of modular robotic arms.
+
+			The ModMAN manipulator is a serial robotic manipulator consisting of multiple modules and has genderless connectors between each module that allows both hardware and electronic connection.
+
+		</p>
+
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/JXyDY5VqN64" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+		<p>
+			My main contribution was the development of the modules' slave system architecture and the motion controller. 
+
+			By using the slave system I developed, a robot module automatically detects the connection configuration, such as connected direction with respect to its neighbor modules, and provides the information to the high-level master system to solve the manipulator's kinematics.
+
+			The control the modules' joint with the setpoints of either position, speed, or torque was implemented on the slave system.
+
+		</p>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/73lQLuMG1Gs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>		
+ 		<p>	
+			By integrating with the slave system and the master system, the robotic model is automatically generated for any arbitrary serial combination of the modules and the control gains are auto-calibrated. 
+
+		</p>
+
+		<br>
+
+		<small>
+			The works were done with Dr. Sungchul Kang, Dr. Woosub Lee, Dr. Wooseok Choi, Mr. Alchan Yoon, and Mr. Deaho Moon. The ModMAN system was presented at the Automatica 2018 in Munich, Germany.<br>
+		</small>
+
+		<br>
+
+	</div>
+
+	<button class="show-toggle click">Read</button>
+
+</article>

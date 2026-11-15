@@ -1,0 +1,117 @@
+<article>
+	<img class="logo-img" src="./images/research/logos/tohoku.png">
+	<img class="logo-img" src="./images/research/logos/kist.png">
+	
+	<h1>Wheeled robots' mechanism and control</h1>
+	
+	<p>
+		For my undergraduate studies at Tohoku University, I built the two-wheeled rover prototype of <a target="_blank" href="http://en.wikipedia.org/wiki/Hakuto">Hakuto</a>, the Google Lunar XPRIZE team in Japan.
+		While working at the Korea Institute of Science and Technology (KIST), I designed a mobile testbed for lunar exploration with minimized redundancy of actuators. I also developed a wheeled robot utilizing dual-motor driving servo for the robot's fail-safe actuation and designed a switching controller for it at KIST.
+	</p>
+
+	<div class="show-div hide">
+
+	<br>
+		
+	<h2>Dual rover system</h2>
+	<p>
+		The space robotics laboratory at Tohoku University developed Hakuto's dual rover system prototype that consists of a parent robot and a child robot; the parent robot is anchored and deploys the child robot to explore inside potential volcanic skylights caused by the collapse of lava tubes.
+	</p>
+
+	<img src="./images/research/dual_rover.png" alt="" width="320">
+
+	<p>
+		My works at the project are the development of the two-wheeled climbing child robot and the evaluation of the robot's performance by indoor and field experiments.
+
+		Considering the volume limits for the dual rover system as a payload to launching vehicle, the child robot prototype is designed to be small enough to fit into the space between the parent robot's rear wheels.
+	</p>
+
+	<img src="./images/research/tetris.png" alt="" width="320">
+
+	<p>
+		By taking advantages of the mechanism's simplicity and suitability for climbing, the robot has two independently actuated wheels, a passive caster on the tail, and a controllable tether output. The climbing performance and mobility of the robot were evaluated by both indoor and field experiments.
+	</p>
+
+	<br>
+
+	<h2> 4-wheeled mechanism with minimized redundancy of actuators</h2>
+	<p>	
+		At KIST, I developed a rover engineering model to test rover mechanisms for the real mission.
+
+		Assuming a lunar exploration mission of a period longer than one month including approximately 2 weeks of lunar night, a rover must be guaranteed of its mobility with light-weight mechanism and survive the hostile environments.	
+	</p>
+
+	<img src="./images/research/rover_mechanism.png" alt="" width="480">
+
+	<p>
+		To further decrease the weight of the rover, I designed the rover's explicit-steering mechanism to have a minimized redundancy of DOFs by analyzing its kinematics. 
+
+		At the same time, to reduce the weight and implement shielding for reliable actuation from external effects, such as cosmic rays and temperature changes, all the actuators are installed in the warm box and the actuator's driving power is transmitted to the wheels by gear chains, which does not require additional shielding outside the warm box.
+	</p>
+
+	<img src="./images/research/rover_dm.png" alt="" width="480">
+
+	<p>
+		For hardware implementation, a rover testbed was built with the motor controller based on TI's digital signal processors and the single board computer with a Linux OS.
+
+		The performance of the mechanism was evaluated experimentally by the rover testbed's path-following.
+
+	</p>
+
+	<br>
+
+	<h2>Dual-motor driving servo</h2>
+	<p>
+		Multi-motor driving servo is an actuation system that allows large power output with the motors of limited capacity, which is usually used in robotic manipulator. However, at KIST, I applied the dual-motor driving servo to a wheeled-robot so that the robot is guaranteed of the controllability of the mobility even in the case of a motor’s failure.
+	</p>
+		<img src="./images/research/dual_motor_model.png" alt="" width="320">
+	<p>
+		To control the dual-motor driving, I designed a switching controller with globally uniformly exponential stability. The control law controls the wheel's velocity and distributes the current load of each motor evenly in the case that both motors work normally. When either of the motors cannot be powered, the controller switches the control law so that the other motor actuates the wheel alone without losing stability.
+	</p>
+		<figure>
+			<img src="./images/research/dual_motor_simulation.png" alt="" width="320">
+		
+			<figcaption style="text-align: center;">
+				<small>
+ 				Simulation results of the dual-motor driving servo when either of the motors fails
+ 				</small>
+			</figcaption>
+		</figure>
+	<p>
+		The feasibility of the mobile robot with dual-motor driving servo is verified by numerical simulation on MATLAB. I am currently working on building the robot testbed and experimental setup to validate the feasibility experimentally. 
+
+		<!-- If you want to know more about it, please read the following preprint. [<a target="_blank" href="./files/research/dual_motor_preprint.pdf">PDF</a>] -->
+	</p>
+
+	<br>
+
+	<h2> Reference </h2>
+	
+	<small>
+
+		<ul>
+			<li>J. Walker, K. Yoshida, N. Britton, M. Seo, “Dual Rover Robotic Mission Architecture for Ex- ploration of a Potential Lava Tube Skylight on the Lunar Surface”, Proc. 65th International Astronautical Congress, September 2014 [<a target="_blank" href="./files/research/IAC-14,A3,2B,8,x21167.pdf">PDF</a>]</li>
+	
+			<li>M. Seo, “Design and Performance Evaluation of a Tethered Climbing Robot”, B.Eng. Thesis, Tohoku University, March 2014 [<a target="_blank" href="./files/research/BEng-Tohoku.pdf">PDF</a>]</li>
+	
+			<br>
+	
+			<li>M. Seo, B. Park, W. Lee, ”A light-weight rover prototype with mechanism to secure reliable actuation for a long-term lunar exploration”, Proc. 70th International Astronautical Congress, October 2019 (Withdrawn)</li>
+	
+			<li>M. Seo, W. Lee, ”Study on mobility of planetary rovers and the development of a lunar rover prototype with minimized redundancy of actuators”, Journal of the Korean Society for Precision Engineering, April 2019 [<a target="_blank" href="./files/research/jkspe036040339.pdf">PDF</a>] </li>
+	
+			<li>M. Seo, B. Park, W. Lee, “Conceptual Design of a Fail-safe 4-wheeled Rover for Lunar Explo- ration”, Proc. 2017 IEEE International Conference on Multisensor Fusion and Integration for Intelligent Systems, November 2017 [<a target="_blank" href="./files/research/mfi2017.pdf">PDF</a>]</li>
+	
+		</ul>
+
+		The works at Tohoku University were done with Dr. Nathan Britton and Dr. John Walker, and advised by Prof. Kazuya Yoshida. The works at KIST were conducted with Dr. Woosub Lee. <br>
+
+		</small>
+
+		<br>
+
+	</div>
+
+	<button class="show-toggle click">Read</button>
+
+</article>
