@@ -7,13 +7,13 @@
 
 @font-face 
 {
-	font-family: "User content";
+	font-family: "User light";
 	src: url(../fonts/Manrope/Manrope-Light.otf) format("truetype");
 }
 
 @font-face 
 {
-	font-family: "User light";
+	font-family: "User content";
 	src: url(../fonts/Manrope/Manrope-Regular.otf) format("truetype");
 }
 
