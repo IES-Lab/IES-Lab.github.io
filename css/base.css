@@ -13,6 +13,12 @@
 
 @font-face 
 {
+	font-family: "User link";
+	src: url(../fonts/Manrope/Manrope-Regular.otf) format("truetype");
+}
+
+@font-face 
+{
 	font-family: "User highlight";
 	src: url(../fonts/Manrope/Manrope-Bold.otf) format("truetype");
 }
@@ -36,6 +42,7 @@ body
 a 
 {
 	text-decoration: none; 
+	font-family: "User link";
 	color: rgb(8, 128, 192)
 }
 
