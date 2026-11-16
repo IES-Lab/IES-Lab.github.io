@@ -1,7 +1,11 @@
 image-gallery {
 	display: block;
+	position: relative;
 	min-width: 0;
 	--gallery-fade: 36px;
+	--gallery-caption-gap: 2px;
+	--gallery-caption-line-height: 18px;
+	--gallery-track-padding: 8px;
 }
 
 image-gallery .gallery-viewport {
@@ -16,7 +20,7 @@ image-gallery .gallery-track {
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
-	padding-bottom: 8px;
+	padding-bottom: var(--gallery-track-padding);
 }
 
 image-gallery .gallery-viewport.is-looping .gallery-track {
@@ -41,23 +45,27 @@ image-gallery .gallery-track > figure {
 image-gallery .gallery-track img {
 	display: block;
 	width: 100%;
-	aspect-ratio: 4 / 3;
+	aspect-ratio: 16 / 9;
 	object-fit: contain;
+	object-position: center bottom;
 	background: transparent;
 	border-radius: 6px;
 }
 
 image-gallery figcaption {
-	margin-top: 6px;
+	margin-top: var(--gallery-caption-gap);
 	font-size: 14px;
+	line-height: var(--gallery-caption-line-height);
 	text-align: center;
 }
 
 image-gallery .gallery-controls {
+	position: absolute;
+	inset: 0 0 calc(var(--gallery-track-padding) + var(--gallery-caption-gap) + var(--gallery-caption-line-height)) 0;
 	display: flex;
-	justify-content: flex-end;
-	gap: 2px;
-	margin-top: 4px;
+	justify-content: space-between;
+	pointer-events: none;
+	z-index: 2;
 }
 
 image-gallery .gallery-controls[hidden] {
@@ -65,16 +73,18 @@ image-gallery .gallery-controls[hidden] {
 }
 
 image-gallery .gallery-controls button {
-	display: grid;
-	place-items: center;
-	width: 32px;
-	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--gallery-fade);
+	height: 100%;
 	padding: 0;
 	border: 0;
 	background: transparent;
 	color: rgb(0, 81, 120);
 	font-size: 0;
 	cursor: pointer;
+	pointer-events: auto;
 }
 
 image-gallery .gallery-controls button::before {
@@ -83,43 +93,28 @@ image-gallery .gallery-controls button::before {
 	height: 14px;
 	background: currentColor;
 	clip-path: polygon(0 0, 100% 50%, 0 100%);
+	opacity: 0;
+	transition: opacity 0.15s ease;
 }
 
 image-gallery .gallery-controls button[data-gallery-step="-1"]::before {
 	transform: scaleX(-1);
 }
 
-image-gallery .gallery-controls button:hover {
-	opacity: 0.65;
+image-gallery:hover .gallery-controls button::before,
+image-gallery .gallery-controls button:focus-visible::before {
+	opacity: 1;
 }
 
+/* The visible controls now also serve as the clickable faded edges. */
 image-gallery .gallery-edge {
-	position: absolute;
-	top: 0;
-	bottom: 8px;
-	width: var(--gallery-fade);
-	padding: 0;
-	border: 0;
-	background: transparent;
-	cursor: pointer;
-	z-index: 1;
-}
-
-image-gallery .gallery-edge[hidden] {
 	display: none;
 }
 
-image-gallery .gallery-edge.prev {
-	left: 0;
-}
-
-image-gallery .gallery-edge.next {
-	right: 0;
-}
-
-image-gallery .gallery-edge:focus-visible {
-	outline: 2px solid rgb(0, 81, 120);
-	outline-offset: -2px;
+@media (hover: none) {
+	image-gallery .gallery-controls button::before {
+		opacity: 1;
+	}
 }
 
 @media (max-width: 600px) {
@@ -137,5 +132,8 @@ image-gallery .gallery-edge:focus-visible {
 @media (prefers-reduced-motion: reduce) {
 	image-gallery .gallery-track {
 		scroll-behavior: auto;
+	}
+	image-gallery .gallery-controls button::before {
+		transition: none;
 	}
 }
