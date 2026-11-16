@@ -81,7 +81,7 @@ image-gallery .gallery-controls button {
 	padding: 0;
 	border: 0;
 	background: transparent;
-	color: rgb(0, 81, 120);
+	color: #eef4f7;
 	font-size: 0;
 	cursor: pointer;
 	pointer-events: auto;
