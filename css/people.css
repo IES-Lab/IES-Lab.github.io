@@ -1,0 +1,46 @@
+.people-section h2 {
+    margin-top: 0;
+}
+
+.lab-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.lab-member {
+    flex: 0 1 160px;
+    max-width: 100%;
+    text-align: left;
+}
+
+article .lab-member .member-photo {
+    display: block;
+    float: none;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: center 35%;
+    margin: 0 0 8px;
+}
+
+.lab-member h3 {
+    margin: 0 0 3px;
+}
+
+.lab-member small {
+    display: block;
+    line-height: 1.5;
+}
+
+article .collaborators {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.collaborators li + li {
+    margin-top: 5px;
+}

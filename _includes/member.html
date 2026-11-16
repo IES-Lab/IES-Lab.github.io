@@ -1,0 +1,13 @@
+<div class="lab-member">
+    <img class="member-photo" src="{{ include.image | escape }}" alt="{{ include.name | escape }}">
+    <h3>
+        {% if include.webpage %}
+        <a href="{{ include.webpage | escape }}" target="_blank" rel="noopener noreferrer">{{ include.name }}</a>
+        {% else %}
+        {{ include.name }}
+        {% endif %}
+    </h3>
+    <small>
+        {{ include.role }}{% if include.affiliation %}<br>{{ include.affiliation }}{% endif %}
+    </small>
+</div>

@@ -1,13 +1,38 @@
-<article id="without_aside">
-    Thank you for your interest in our work!
-    We are actively seeking talented and motivated individuals to join our group.
-    Please refer to the information below before reaching out.
-    <ul>
-        <li>For prospective graduate students, please follow our department's <a href="https://www.ucf.edu/degree/electrical-engineering-phd/">graduate admissions process</a> and indicate your interest in joining our group in your statement of purpose. You are welcome to contact the PI, but we may not be able to respond individually before the formal application review process begins.</li>
-        <li>For current UCF students, please complete <a href="https://forms.gle/w1GLoht6hfRZjFB6A">this form</a> and notify the PI by email.</li>
-        <li>For prospective postdoctoral researchers, we currently have no open positions.</li>
-        <li>For visiting scholars and research interns, we welcome applications for long-term visits (six months or longer). Please complete <a href="https://forms.gle/w1GLoht6hfRZjFB6A">this application form</a>.</li>
+---
+---
+<link rel="stylesheet" href="./css/people.css">
+
+<article class="people-section">
+    <h2>Lab Members</h2>
+
+    <div class="lab-members">
+        {% include member.html
+            image="./images/people/mingyo_seo.png"
+            name="Mingyo Seo"
+            role="Principal Investigator"
+            <!-- affiliation="Assistant Professor, UCF" -->
+            webpage="https://mingyoseo.com"
+        %}
+
+        {% include member.html
+            image="./images/people/jaepil_jang.jpg"
+            name="Jaepil Jang"
+            role="Ph.D. Student"
+            <!-- affiliation="UCF ECE" -->
+        %}
+    </div>
+</article>
+
+<article class="people-section">
+    <h2>Collaborators</h2>
+
+    <ul class="collaborators">
+        {% include collaborator.html name="Dong Ho Kang" affiliation="Ph.D. Student, Mechanical Engineering, UT Austin" webpage="https://www.dongho.dev" %}
+        {% include collaborator.html name="Yiheng Ji" affiliation="Ph.D. Student, Mechanical Engineering, UT Austin" webpage="https://www.linkedin.com/in/yiheng-terry-ji-572223226/" %}
+        {% include collaborator.html name="Yaoyao Qian" affiliation="M.S. Student, Computer Science, Northeastern University" webpage="https://freaxhomepage.vercel.app" %}
+        {% include collaborator.html name="Jiho Hong" affiliation="Ph.D. Student, Mechanical Engineering, Kyung Hee University" %}
+        {% include collaborator.html name="Lim Russel" affiliation="M.S. Student, Robotics, UCF" %}
+        {% include collaborator.html name="Junyang Tang" affiliation="Ph.D. Student, ECE, UCF" %}
+        {% include collaborator.html name="Woojung Son" affiliation="M.S. Student, Agriculture, University of Florida" %}
     </ul>
-    Due to the high volume of inquiries we receive, we may not be able to respond to every message individually.
-    The PI will reach out to selected candidates to arrange in-person or virtual interviews or discuss potential research opportunities as appropriate.
 </article>
