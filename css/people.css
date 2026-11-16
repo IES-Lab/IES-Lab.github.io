@@ -13,7 +13,7 @@
 
 .lab-member {
     display: grid;
-    grid-template-columns: 140px minmax(0, 1fr);
+    grid-template-columns: 100px minmax(0, 1fr);
     grid-template-rows: auto 1fr;
     column-gap: 16px;
     align-items: start;
