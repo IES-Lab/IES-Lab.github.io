@@ -7,8 +7,20 @@
 
 @font-face 
 {
+	font-family: "User light";
+	src: url(../fonts/Manrope/Manrope-Light.otf) format("truetype");
+}
+
+@font-face 
+{
 	font-family: "User content";
 	src: url(../fonts/Manrope/Manrope-Regular.otf) format("truetype");
+}
+
+@font-face 
+{
+	font-family: "User highlight";
+	src: url(../fonts/Manrope/Manrope-Bold.otf) format("truetype");
 }
 
 @font-face 
@@ -30,11 +42,13 @@ body
 a 
 {
 	text-decoration: none; 
-	color: rgba(72, 60, 148, 1);
+	color: rgb(0, 81, 120)
 }
 
-
-a:hover {text-decoration: underline;}
+a:hover 
+{
+	text-decoration: underline;
+}
 
 
 footer

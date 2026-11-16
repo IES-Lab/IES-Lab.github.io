@@ -2,8 +2,7 @@
 article
 {
 	/* width: 500px; */
-	/* background-color: #eef0f7; */
-	background-color: #f1f0f7;
+	background-color: #eef4f7;
 	margin: 20px;
 
 	padding: 20px;
@@ -47,12 +46,26 @@ article h4
 	font-size: 14px;
 }
 
+article a 
+{
+	font-family: "User content";
+}
+
+article b, article strong {
+	font-family: "User highlight";
+}
+
 article p
 {
 	text-indent: 20px;
 	line-height: 1.6;
 }
 
+article ul, article ol 
+{
+    margin: 0.5em 0;
+    line-height: 1.6;
+}
 
 article figure
 {
@@ -75,20 +88,14 @@ article iframe
   margin-right: auto;
 }
 
-@media all and (orientation: portrait) and (max-width: 600px) 
-{
-	article img
+@media all and (orientation: portrait) and (max-width: 600px) {
+    article img,
+    article iframe
 	{
-		float: none;
-		clear: both;
-		margin-left: auto !important;
-		margin-right: auto !important;
-	}
-	article iframe
-	{
-		float: none;
-		clear: both;
-		margin-left: auto !important;
-		margin-right: auto !important;
-	}
+        float: none;
+        clear: both;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

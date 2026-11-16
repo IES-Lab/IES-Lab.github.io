@@ -1,0 +1,139 @@
+image-gallery {
+	display: block;
+	position: relative;
+	min-width: 0;
+	--gallery-fade: 36px;
+	--gallery-caption-gap: 2px;
+	--gallery-caption-line-height: 18px;
+	--gallery-track-padding: 8px;
+}
+
+image-gallery .gallery-viewport {
+	position: relative;
+}
+
+image-gallery .gallery-track {
+	--gallery-gap: 12px;
+	--gallery-card-width: calc((100% - 2 * var(--gallery-gap)) / 3);
+	display: flex;
+	gap: var(--gallery-gap);
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	padding-bottom: var(--gallery-track-padding);
+}
+
+image-gallery .gallery-viewport.is-looping .gallery-track {
+	mask-image: linear-gradient(to right, transparent, #000 var(--gallery-fade),
+		#000 calc(100% - var(--gallery-fade)), transparent);
+	-webkit-mask-image: linear-gradient(to right, transparent, #000 var(--gallery-fade),
+		#000 calc(100% - var(--gallery-fade)), transparent);
+	scrollbar-width: none;
+}
+
+image-gallery .gallery-viewport.is-looping .gallery-track::-webkit-scrollbar {
+	display: none;
+}
+
+image-gallery .gallery-track > figure {
+	flex: 0 0 var(--gallery-card-width);
+	min-width: 0;
+	margin: 0;
+	scroll-snap-align: start;
+}
+
+image-gallery .gallery-track img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: contain;
+	object-position: center bottom;
+	background: transparent;
+	border-radius: 6px;
+}
+
+image-gallery figcaption {
+	margin-top: var(--gallery-caption-gap);
+	font-size: 14px;
+	line-height: var(--gallery-caption-line-height);
+	text-align: center;
+}
+
+image-gallery .gallery-controls {
+	position: absolute;
+	inset: 0 0 calc(var(--gallery-track-padding) + var(--gallery-caption-gap) + var(--gallery-caption-line-height)) 0;
+	display: flex;
+	justify-content: space-between;
+	pointer-events: none;
+	z-index: 2;
+}
+
+image-gallery .gallery-controls[hidden] {
+	display: none;
+}
+
+image-gallery .gallery-controls button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--gallery-fade);
+	height: 100%;
+	padding: 0;
+	border: 0;
+	background: transparent;
+	color: #eef4f7;
+	font-size: 0;
+	cursor: pointer;
+	pointer-events: auto;
+}
+
+image-gallery .gallery-controls button::before {
+	content: "";
+	width: 12px;
+	height: 14px;
+	background: currentColor;
+	clip-path: polygon(0 0, 100% 50%, 0 100%);
+	opacity: 0;
+	transition: opacity 0.15s ease;
+}
+
+image-gallery .gallery-controls button[data-gallery-step="-1"]::before {
+	transform: scaleX(-1);
+}
+
+image-gallery:hover .gallery-controls button::before,
+image-gallery .gallery-controls button:focus-visible::before {
+	opacity: 1;
+}
+
+/* The visible controls now also serve as the clickable faded edges. */
+image-gallery .gallery-edge {
+	display: none;
+}
+
+@media (hover: none) {
+	image-gallery .gallery-controls button::before {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 600px) {
+	image-gallery .gallery-track {
+		--gallery-card-width: calc((100% - var(--gallery-gap)) / 2);
+	}
+}
+
+@media (max-width: 400px) {
+	image-gallery .gallery-track {
+		--gallery-card-width: 100%;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	image-gallery .gallery-track {
+		scroll-behavior: auto;
+	}
+	image-gallery .gallery-controls button::before {
+		transition: none;
+	}
+}

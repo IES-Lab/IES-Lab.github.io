@@ -39,10 +39,11 @@ header nav .nav-menu > li
 	font-weight: bold;
 }
 
+
 header nav .nav-menu > li.active
 {
 	color: rgba(0, 0, 0, 1);
-	background-color: #dde0ee;
+	background-color: #eef4f7;
 	border: 0px;
 	border-radius: 3px;
 }
