@@ -5,14 +5,24 @@
     gap: 20px;
 }
 
+.lab-members {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .lab-member {
-    flex: 0 1 100px;
-    max-width: 100%;
-    border-radius:5%;
+    display: grid;
+    grid-template-columns: 140px minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+    column-gap: 16px;
+    align-items: start;
     text-align: left;
 }
 
 article .lab-member .member-photo {
+    grid-column: 1;
+    grid-row: 1 / span 2;
     display: block;
     float: none;
     width: 100%;
@@ -20,12 +30,22 @@ article .lab-member .member-photo {
     aspect-ratio: 1 / 1;
     object-fit: cover;
     object-position: center 35%;
-    margin: 0 0 8px;
+    margin: 0;
+    border-radius:5%;
 }
 
 .lab-member small {
+    grid-column: 2;
+    grid-row: 2;
     display: block;
     line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .lab-member {
+        grid-template-columns: 100px minmax(0, 1fr);
+        column-gap: 12px;
+    }
 }
 
 article .collaborators {
