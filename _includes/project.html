@@ -8,7 +8,12 @@
 
     <small>
         <p style="text-indent: 0">{{ include.authors }}</p>
-        <p style="text-indent: 0">{{ include.venue }}</p>
+        <p style="text-indent: 0">
+            {{ include.venue }}
+            {% if include.note %}
+            <br><b>{{ include.note }}</b>
+            {% endif %}
+        </p>
         <p style="text-indent: 0">
             {% if include.webpage %}
             <a target="_blank" href="{{ include.webpage }}"><i class="fa-solid fa-earth-americas"></i> Webpage</a>&ensp;
