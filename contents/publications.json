@@ -12,6 +12,12 @@
     }
     ,
     {
+        "name":"MimicDroid",
+        "path":"./articles/publications/mimicdroid.html",
+        "date":20250911
+    }
+    ,
+    {
         "name":"PLATO",
         "path":"./articles/publications/plato.html",
         "date":20260205
